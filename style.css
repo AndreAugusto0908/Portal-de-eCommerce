@@ -54,7 +54,7 @@ section img {
     
     main {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: 50px;
@@ -70,43 +70,49 @@ section img {
     section {
           width: 100%;
         }
+        
     }
 
     .sidebar {
-        height: 110%;
-        width: 10%;
-        position: absolute;
-        top: 50px;
-        right: 30px;
-        overflow-x: hidden;
-        padding-top: 20px;
-        flex-wrap: wrap;
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
-        text-align: center;
+      height: 100%;
+      width: 8%;
+      justify-content: right;
+      overflow-x: hidden;
+      padding-top: 20px;
+      flex-wrap: wrap;
+    }
+    .sidebar img {
+      width: 80%;
+    }
+    
+  
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .sidebar li {
+      padding: 10px;
+    }
+  
+      
+      @media screen and (max-width: 768px) {
+       
+        .sidebar {
+          width: 100%;
+          flex-direction: column;
+        }
+        }
 
-      }
-      .sidebar img{
-        width: 50%;
-      }
-    
-      .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-    
-      .sidebar li {
-        padding: 10px;
-        border-bottom: 1px solid #fff;
-      }
-    
-      .sidebar li:last-child {
-        border-bottom: none;
-      }
-    
-      .sidebar a {
-        color: #fff;
-        text-decoration: none;
-      }
+        main div {
+          margin-bottom: 1000px;
+          justify-content: right;
+      overflow-x: hidden;
+      
+      flex-wrap: wrap;
+        }
+
+      
+
+
