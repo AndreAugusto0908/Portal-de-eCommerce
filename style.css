@@ -90,18 +90,17 @@ main {
 
 #camisas{
   flex: 70%;
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 section {
   padding:20px;
-  display: grid;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  
 }
 
 section img {
-  width: 60%;
+  width: 70%;
   }
   
   section h2 {
@@ -157,15 +156,15 @@ section img {
       padding: 10px;
     }
  /* header e carousel */
-
+ 
  header{
   display: flex;
-  background-color: gray;
+  background-image: url(esatdio.png);
   flex-wrap: wrap;
 }
 
 .slider{
-  flex: 33%;
+  flex: 25%;
   margin: 0 auto;
   width: 800px;
   height: 400px;
@@ -263,18 +262,53 @@ justify-content: center;
 
    /* formulario*/
 
-.search {
-  flex: 15%;
-  flex-wrap: wrap;
+.search-box{
+  transform: translate(-50%, -50%);
+  background: black;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  color: yellow;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.search-txt{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: yellow;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 240px;
 }
 
 
-.formulario {
-  flex: 30%;
-  
-  flex-wrap: wrap;
-
-}
     
       
 
+@media screen and (max-width: 768px){
+
+  *{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #camisas{
+    flex-wrap: wrap;
+    align-items: center;
+    grid-template-columns: auto;
+  }
+
+  .navbar{
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-template-columns: auto;
+    
+  }
+  
+}
